@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "MyAugmentedReality"
+include ':app'
+
+include ':sceneform'
+project(':sceneform').projectDir=new File('sceneformsrc/sceneform')
+include ':sceneformux'
+project(':sceneformux').projectDir=new File('sceneformux/ux')
